@@ -1,0 +1,268 @@
+
+.gamePage{
+    margin: 72px 0;
+    display: flex;
+    gap: 40px;
+    &__content{
+        border-radius: 30px;
+        padding: 40px 50px;
+        background-color: rgb(22 22 22);
+        flex: 75%;
+        &_title{
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 126.2%;
+            text-transform: uppercase;
+            padding-bottom: 17px;
+        }
+        
+        &_video{
+            border-radius: 15px;
+            border: 3px solid #E5453D ;
+            margin-bottom: 40px;
+        }
+
+        &_images{
+
+            img{
+
+            }
+        }
+
+        &_text{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150.7%;
+            padding-bottom: 40px;
+        }
+
+        &_columns{
+            display: flex;
+            padding-bottom: 30px;
+        }
+
+        &_column{
+            border-left: 1px solid #3b3b3b;
+            padding: 10px 50px 10px 20px;
+
+            h3{
+                color: rgba(245, 245, 245, 0.6);
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 30px;
+            }
+            
+            &_list{
+                display: flex;
+                p{
+                    text-decoration: underline;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        &_description{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150.7%;
+            padding-bottom: 20px;
+            overflow: hidden;
+
+            color: #C7C7C7;
+        }
+
+        &_dopInfo{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            img{
+                max-width: 340px;
+                border-radius: 8px;
+            }
+        }
+
+        &_hideDesck{
+            background: rgb(78, 78, 78);
+            box-shadow: 0px -28px 48px -9px rgb(0, 0, 0);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+            p{
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 50px;
+                position: relative;
+                width: 140px;
+                margin: 0 auto;
+            }
+            P::after{
+                content: '';
+                display: block;
+                width: 30px;
+                height: 30px;
+                background-image: url(/arrow.svg);
+                background-repeat: no-repeat;
+                background-size: 20px;
+                transform: rotate(90deg);
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                transition: .2s;
+            }
+        }
+        &_hideDesck:hover{
+            background-color: #434343;
+        }
+
+        &_hideDesck_active{
+            
+            P::after{
+                content: '';
+                transform: rotate(-90deg);
+                transition: .2s;
+                top: 5px;
+                right: 0px;
+            }
+        }
+
+        &_specifications_title{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 126.2%;
+            padding: 30px 0;
+        }
+
+        &_specifications{
+            border-radius: 15px;
+            background: rgb(38, 38, 38);
+            padding: 35px 60px;
+        }
+    }
+}
+
+.specifications__categories{
+    display: flex;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border-bottom: 1px solid #434343;
+    margin-bottom: 30px;
+    &_category{
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 30px 0px;
+        flex: 50%;
+        text-align: left;
+        border-bottom: 4px solid transparent;
+    }
+
+    &_category:hover{
+        border-bottom: 4px solid #fff;
+    }
+}
+
+.specification{
+
+    &_columns{
+        display: flex;
+    }
+    &_column{
+        
+        &_title{
+            color: rgba(245, 245, 245, 0.6);
+            font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 30px;
+        }
+
+        &_box{
+            padding-bottom: 20px;
+            h3{
+                color: rgba(245, 245, 245, 0.6);
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            p{
+                padding-top: 5px;
+                line-height: 22px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    &_column:nth-child(2){
+        padding-left: 25px;
+    }
+}
+
+
+.sitebar{
+    flex: 35%;
+    border-radius: 30px;
+
+    &_image{
+        max-width: 270px;
+        margin-top: 20px;
+    }
+    
+    &_price{
+        color: rgb(245, 245, 245);
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &_buy{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 127.2%;
+        letter-spacing: -0.025em;
+        text-transform: uppercase;
+        padding: 15px 97px;
+        background: linear-gradient(91.07deg, #E5453D -15.2%, #FF7A2E 225.8%);
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: .2s;
+    }
+
+    &_add{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 127.2%;
+        letter-spacing: -0.025em;
+        text-transform: uppercase;
+        padding: 15px 81px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: .2s;
+    }
+
+    &_buy:hover,
+    &_add:hover{
+        background-color: #222222;
+        opacity: .9;
+    }
+
+    &_info{
+
+        &_line{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #333333;
+            &_title{
+                font-size: 15px;
+            }
+
+            &_inf{
+                opacity: .5;
+            }
+        }
+    }
+}
+

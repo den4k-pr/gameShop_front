@@ -1,0 +1,137 @@
+
+.header{
+    background-color: rgb(22 22 22);
+    padding: 16px 0;
+
+    &__content{
+        text-align: center;
+        position: relative;
+    }
+
+    .modulBtn{
+        position: absolute;
+        left: 0;
+        transform: rotate(90deg);
+        background: linear-gradient(90deg, #E5453D -14.78%, #FF7A2E 451.57%);
+        border-radius: 5px;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+
+    &__list_game{
+        display: flex;
+        align-items: center;
+        background-color: #1B1919;
+        border-radius: 10px;
+        margin: 50px 0;
+        padding-right: 50px;
+        position: relative;
+
+        img{
+            margin-right: 33px;
+            max-width: 212px;
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        &_box_text{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 127.2%;
+            letter-spacing: -0.025em;
+
+            color: #5A5A5A;
+        }
+
+        &_box_name{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 126.2%;
+            text-transform: uppercase;
+            padding-bottom: 11px;
+        }
+        &_box_price{
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 135.7%;
+            padding-top: 5px;
+
+            text-transform: uppercase;
+        }
+        &_box_option{
+            margin: 10px 0;
+            background: linear-gradient(90deg, #E5453D -14.78%, #FF7A2E 451.57%);
+            padding: 7px 35px;
+            border-radius: 15px;
+            width: 150px;
+            position: relative;
+        }
+        &_box_option::before{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: #ffffff;
+            position: absolute;
+            top: 9px;
+            left: 10px;
+        }
+    }
+}
+
+
+.delete{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 9px 11px;
+    background: #f1433a42;
+    border-radius: 12px;
+    width: 39px;
+    height: 39px;
+    transition: .3s;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.delete:hover{
+    background-color: transparent;
+    border: 2px solid #E5453D;
+}
+.cart__statistic{
+    margin-top: 50px;
+    margin-left: 30px;
+    background: #1B1919;
+    border-radius: 10px;
+    padding: 30px 20px 00px 20px;
+    height: 200px;
+    width: 100%;
+    max-width: 400px;
+
+    &_btn{
+        padding: 15px 72px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 127.2%;
+
+        letter-spacing: -0.025em;
+        text-transform: uppercase;
+        background: #E5453D;
+        border-radius: 8px;
+        margin-top: 20px;
+        border: 3px solid #E5453D;
+        transition: .2s;
+    }
+    &_btn:hover{
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,114 @@
+
+.modal{
+    position: fixed;
+    overflow-y: scroll;
+    top: 68px;
+    left: 0;
+    background-color: #1B1919;
+    height: 100%;
+    z-index: 999;
+    transition: .5s;
+    padding-bottom: 100px;
+    // transform: translateX(-100%);
+
+    &__content{
+        padding: 60px 62px 0px 42px;
+
+        &_punkt:hover .modal__content_punkt_link{
+            color: #e95951;
+        }
+        &_punkt{
+            width: 200px;
+            padding: 20px 0;
+            border-bottom: 1px solid #474747;
+            cursor: pointer;
+
+            &__list{
+                height: 0;
+                visibility: hidden;
+            }
+            &_box{
+                display: flex;
+                align-items: center;
+            }
+
+            &_link{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 135.7%;
+                padding-left: 17px;
+                color: #797979;
+
+            }
+            &_img{
+                width: 24px;
+                height: 24px;
+            }
+            &_arrow{
+                width: 15px;
+                margin-left: auto;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.modal__content_punkt__list_link{
+    padding: 10px 0;
+    font-size: 16px;
+    color: #797979;
+    position: relative;
+    padding-left: 34px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+.modal__content_punkt__list_link:before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffffbb;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 14px;
+}
+.modal__content_punkt__list_link:hover::before{
+    background-color: #F1433A;
+}
+
+
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+.modal::-webkit-scrollbar-thumb {
+    background-color: #f1433a3c;
+    border-radius: 8px;
+}
+
+.modal__content_btn{
+    background: linear-gradient(90deg, rgba(229, 69, 61, 0.6) -14.78%, rgba(255, 122, 46, 0.6) 451.57%);
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    img{
+        width: 10px;
+        transition: .2s;
+    }
+}
+
+.modal__punkt_change .modal__content_punkt_arrow{
+    transform: rotate(90deg);
+    transition: .2s;
+}
+
+.modal__punkt_change .modal__content_punkt_link{
+    color: #e95951;
+}
